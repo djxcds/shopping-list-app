@@ -22,7 +22,6 @@ class ShoppingListNotifier extends StateNotifier<List<GroceryItem>> {
           'category': item.category.category,
         }),
       );
-      state = [...state, item];
     } on Exception catch (e) {
       throw Exception(e);
     }
@@ -47,6 +46,7 @@ class ShoppingListNotifier extends StateNotifier<List<GroceryItem>> {
       final categoriesMap = categories.entries;
 
       if (response.body == 'null') {
+        state = items;
         return;
       }
 
@@ -63,7 +63,6 @@ class ShoppingListNotifier extends StateNotifier<List<GroceryItem>> {
                     (category) => formattedCategory == category.key.name)
                 .value));
       }
-      print('retrieved');
       state = items;
     } on Exception catch (e) {
       throw Exception(e);

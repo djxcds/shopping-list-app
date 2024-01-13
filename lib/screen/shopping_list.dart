@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:shopping_list/models/grocery_item.dart';
-import 'package:shopping_list/providers/shopping_list_provider.dart';
 import 'package:shopping_list/screen/new_item.dart';
 import 'package:shopping_list/widgets/shopping_list_item.dart';
+import 'package:shopping_list/providers/shopping_list_provider.dart';
 
 class ShoppingListScreen extends ConsumerStatefulWidget {
   const ShoppingListScreen({super.key});
